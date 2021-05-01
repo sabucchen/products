@@ -20,3 +20,12 @@ while True:
 
 print(products)
 
+for p in products:
+	#印出小清單內的內容
+	#print(p)
+
+	#再進階一點應用
+	print(p[0], '的價格是', p[1])
+
+
+
