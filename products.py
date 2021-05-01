@@ -1,5 +1,20 @@
-
+#讀取檔案
 products = []
+
+with open('products.csv', 'r', encoding='utf-8') as f:
+	for line in f:
+		#土方法把s取到的東西丟到name,price
+		# s = line.strip().split(',')
+		# name = s[0]
+		# price = s[1]
+
+		#更簡潔的寫
+		name, price = line.strip().split(',')
+		products.append([name, price])
+print(products)
+
+
+
 while True:
 	name = input('請輸入購買過的商品：')
 	if name == 'q':
