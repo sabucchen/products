@@ -9,6 +9,8 @@ with open('products.csv', 'r', encoding='utf-8') as f:
 		# price = s[1]
 
 		#更簡潔的寫
+		if '商品,價格' in line:
+			continue
 		name, price = line.strip().split(',')
 		products.append([name, price])
 print(products)
